@@ -14,5 +14,3 @@ Let's break down the code:
 5. The `paint()` method is overridden. This method is called by the applet container to paint the applet's graphical interface. Here, a loop is used to repeatedly draw the image of the car at different x-coordinates. The `drawImage()` method is used to draw the image on the applet's graphics object (`g`). The `this` keyword refers to the current instance of the applet.
 
 6. Inside the loop, there is a `Thread.sleep(50)` statement. This pauses the execution of the loop for 50 milliseconds, creating a delay between each iteration of drawing the image. This gives the effect of the car moving horizontally across the applet.
-
-Note: This code is written for an applet, which is an older technology. Applets are not widely used anymore due to security concerns and the popularity of web technologies like HTML5 and JavaScript.
