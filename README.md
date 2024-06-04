@@ -1,16 +1,38 @@
-# java_project
-This is a Java program that creates an applet called "Anima" which displays a moving image of a car. 
+# UDP Chat Application
 
-Let's break down the code:
+This is a simple UDP-based chat application that allows two clients to communicate with each other.
 
-1. The first two lines import the necessary packages: `java.awt.*` and `java.applet.*`. These packages contain classes and interfaces for creating graphical user interfaces and applets.
+## Overview
 
-2. The `Anima` class extends the `Applet` class, which is the base class for creating applets in Java.
+This chat application consists of two Java programs: `ClientA` and `ClientB`. `ClientA` sends messages to `ClientB`, and `ClientB` responds back to `ClientA`. The communication is done using UDP sockets.
 
-3. The `picture` variable of type `Image` is declared to hold the image of the car.
+## How to Use
 
-4. The `init()` method is overridden. This method is called by the applet container to initialize the applet. In this method, the `getImage()` method is used to load the image "car.jpg" from the document base (the location where the applet is hosted).
+1. Compile the Java files:
+    ```bash
+    javac ClientA.java
+    javac ClientB.java
+    ```
 
-5. The `paint()` method is overridden. This method is called by the applet container to paint the applet's graphical interface. Here, a loop is used to repeatedly draw the image of the car at different x-coordinates. The `drawImage()` method is used to draw the image on the applet's graphics object (`g`). The `this` keyword refers to the current instance of the applet.
+2. Run the client programs:
+    - Open two terminal windows or tabs.
+    - In one window, run `ClientA`:
+        ```bash
+        java ClientA
+        ```
+    - In the other window, run `ClientB`:
+        ```bash
+        java ClientB
+        ```
 
-6. Inside the loop, there is a `Thread.sleep(50)` statement. This pauses the execution of the loop for 50 milliseconds, creating a delay between each iteration of drawing the image. This gives the effect of the car moving horizontally across the applet.
+3. Start chatting! Type your message in one client, press Enter, and see the response in the other client.
+
+## Requirements
+
+- Java Development Kit (JDK) installed on your system.
+- Network connectivity between the two clients.
+
+## Note
+
+- This chat application uses a simple peer-to-peer (P2P) approach. There's no central server involved; communication is direct between the two clients.
+
